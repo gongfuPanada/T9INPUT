@@ -1,0 +1,96 @@
+.t9_keyboard { 
+    display: table;
+    padding: 0px;
+    margin: 0px;
+    border: 1px solid  #c5c5c5;
+    color: #c5c5c5;
+    font-family: Arial;
+}
+
+.t9_keyboard ul {
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+.t9_keyboard .key {
+    display: block;
+    width: 40px;
+    height: 40px;
+    padding: 1px;
+    margin: 10px;
+    float: left;
+}
+
+.t9_keyboard .key.large {
+    width: 100px;
+}
+.t9_keyboard .key.large > span {
+    width: 100px;
+}
+.t9_keyboard .key > span {    
+    position: relative;
+    display: block;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #a9a9a9;
+    border-radius: 2px 2px 2px 2px;
+    -moz-border-radius: 2px 2px 2px 2px;
+    -webkit-border-radius: 2px 2px 2px 2px;
+    font-size: 12px;
+    -moz-box-sizing: border-box !important;
+    -webkit-box-sizing: border-box !important;
+    box-sizing: border-box !important;
+    text-align: center;
+    padding-top: 2px;
+    color: #7c7c7c;
+    -webkit-box-shadow: 0px 3px 0px -2px rgba(255,255,255,1), 0px 2px 0px 0px rgba(169,169,169,1);
+    -moz-box-shadow: 0px 3px 0px -2px rgba(255,255,255,1), 0px 2px 0px 0px rgba(169,169,169,1);
+    box-shadow: 0px 3px 0px -2px rgba(255,255,255,1), 0px 2px 0px 0px rgba(169,169,169,1);
+    cursor: pointer;
+}
+
+.t9_keyboard .key > span:hover {
+    background-color: #75b4fb;
+    border: 1px solid #5a88c5;
+    color: #fff;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+    -webkit-box-shadow: 0px 3px 0px -2px rgba(117,180,251,1), 0px 2px 0px 0px rgba(90,136,197,1);
+    -moz-box-shadow: 0px 3px 0px -2px rgba(117,180,251,1), 0px 2px 0px 0px rgba(90,136,197,1);
+    box-shadow: 0px 3px 0px -2px rgba(117,180,251,1), 0px 2px 0px 0px rgba(90,136,197,1);
+    cursor: pointer;
+}
+
+.t9_keyboard .key > span:active {
+    margin-top: 2px;
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+}
+
+.t9_keyboard .key.icon > span {
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.t9_keyboard .key > span > per {
+    position: absolute;
+    display: block;
+    width: 100%;
+    margin: 0px auto;
+    bottom: 2px;
+}
+.t9_keyboard .key > span > per.num {
+    top: 5px;
+}
+
+.icon-delete {
+    background-image: url(../images/delete-key.png);
+}
+
+.icon-pageup {
+    background-image: url(../images/pageup-key.png);
+}
+.icon-pagedown {
+    background-image: url(../images/pagedown-key.png);
+}

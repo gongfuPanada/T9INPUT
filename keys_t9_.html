@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" href="css/t9_keyboard.css" type="text/css"/>       
+    <script type="text/javascript" src="assets/js/jquery-1.9.1.js"></script>
+    <script type="text/javascript" src="js/ItemList.js"></script>    
+    <script type="text/javascript" src="js/t9_map.js"></script>
+    <script type="text/javascript" src="js/pinyin_tbl.js"></script>
+    <script type="text/javascript" src="js/OutputCache.js"></script>
+    <script type="text/javascript" src="js/t9_keyboard.js"></script>
+</head>
+<style type="text/css">
+    .item-list ul.list {
+        height: 20px;
+        padding: 5px 15px; 
+        /*padding: 0px;*/
+        color:#00A3AA;
+        border-bottom: 1px solid #CCCCCC;
+        /*background: #CCCCCC;*/
+    }
+    .item-list ul.list >li {        
+        width: 45px;        
+        display: inline-block;
+    }
+    .item-list ul.list >li > span {
+        padding: 2px 5px;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+          border-radius: 3px;        
+        background: #CCCCCC;
+    }
+</style>
+<body>
+    <input type='text' id='t9_virtual'/>
+    <div class="t9_keyboard" id="t9">
+        <div class='item-list'>
+            <ul class='list'></ul>
+        </div>        
+        <ul>
+            <li>
+                <div class="key" code='1'>
+                    <span><per class='num'>1</per><per class='character'>;</per></span>
+                </div>
+                <div class="key" code='2'>
+                    <span><per class='num'>2</per><per class='character'>ABC</per></span>
+                </div>
+                <div class="key" code='3'>
+                    <span><per class='num'>3</per><per class='character'>DEF</per></span>
+                </div>
+                <div class="key icon" code='100'>
+                    <span class="icon-delete"></span>
+                </div>
+            </li>
+            <li>
+                <div class="key" code='4'>
+                    <span><per class='num'>4</per><per class='character'>GHI</per></span>
+                </div>
+                <div class="key" code='5'>
+                    <span><per class='num'>5</per><per class='character'>JKL</per></span>
+                </div>
+                <div class="key" code='6'>
+                    <span><per class='num'>6</per><per class='character'>MNO</per></span>
+                </div>
+                <div class="key icon" code='101'> 
+                    <span class="icon-pageup"></span>                
+                </div>
+            </li>
+            <li>
+                <div class="key" code='7'>
+                    <span><per class='num'>7</per><per class='character'>PQRS</per></span>
+                </div>
+                <div class="key" code='8'>
+                    <span><per class='num'>8</per><per class='character'>TUV</per></span>
+                </div>
+                <div class="key" code='9'>
+                    <span><per class='num'>9</per><per class='character'>WXYZ</per></span>
+                </div>
+                <div class="key icon" code='102'>
+                    <span class="icon-pagedown"></span>
+                </div>
+            </li>
+            <li>
+                <div class="key" code='103'>
+                    <span><per>Num</per></span>
+                </div>
+                <div class="key" code='0'>
+                    <span><per class='num'>0</per><per class='character'>_</per></span>
+                </div>
+                <div class="key large" code='200'>
+                    <span><per>Enter</per></span>
+                </div>
+            </li> 
+        </ul>
+    </div>    
+</body>
+<script type="text/javascript">
+    // var inputcache = OutputCache.create();
+    // inputcache.append('a')
+    // inputcache.append('b')
+    // inputcache.append('c')
+    // inputcache.append('d')
+    // inputcache.moveleft();
+    // inputcache.append('e')
+    // inputcache.del()
+    // inputcache.backspace()
+    // inputcache.backspace()
+    // console.log(inputcache.text())
+
+    T9_keyboard.create($('#t9'))
+
+</script>
+</html>
