@@ -165,9 +165,8 @@ $(function () {
 
             $modal.drags({handle: '.modal-header'})
 
-            $keys.find('.key').on('click', function(e) {
+            $keys.find('.key').on('mousedown', function(e) {
                 e.preventDefault();
-
                 var code = $(this).attr('code')
                 var event = $.Event("keydown", {keycode: code});
                 $(that).trigger(event)
