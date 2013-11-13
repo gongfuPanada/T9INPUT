@@ -1,34 +1,81 @@
-.t9_keyboard { 
-    display: table;
+#t9-modal{
+    width: 230px;
+    height: 285px;
+    border-radius: 0px;
+    margin-top: 10px;
+    margin-left: 10px;
+    z-index:1060;
+}
+
+#t9-modal .modal-header {
+  padding: 10px 0px;
+}
+#t9-modal .modal-body {
     padding: 0px;
-    margin: 0px;
-    border: 1px solid  #c5c5c5;
+}
+
+#t9-modal .item-list {    
+    color:#00A3AA;
+    border-bottom: 1px solid #CCCCCC;    
+}
+
+#t9_keyboard {     
+    padding: 0px;
     color: #c5c5c5;
-    font-family: Arial;
+    font-family: Arial;    
+    box-sizing: border-box !important;
 }
 
-.t9_keyboard ul {
-    list-style: none;
-    padding: 0px;
+#t9_keyboard ul.item-list,
+#t9_keyboard ul.keys {
+    display: table;
+    list-style: none;    
     margin: 0px;
+    box-sizing: border-box !important;    
 }
 
-.t9_keyboard .key {
+#t9_keyboard ul.keys {
+    padding: 15px;
+}
+#t9-modal ul.item-list {
+    width: 100%;
+    padding: 0px 10px;
+    height: 30px;
+    background-color: #CCCCCC;
+}
+#t9-modal ul.item-list >li {
+    display: inline-block;        
+    width: 40px;    
+    padding: 0px 1px;
+    font-size: 14px;
+    line-height: 30px;
+    box-sizing: border-box !important;
+}
+
+#t9_keyboard ul.keys > li{
+    line-height: 14px;
+}
+
+#t9_keyboard .key {
     display: block;
     width: 40px;
     height: 40px;
     padding: 1px;
-    margin: 10px;
+    margin: 5px;
+    -moz-box-sizing: border-box !important;
+    -webkit-box-sizing: border-box !important;
+    box-sizing: border-box !important;
+
     float: left;
 }
 
-.t9_keyboard .key.large {
-    width: 100px;
+#t9_keyboard .key.large {
+    width: 90px;
 }
-.t9_keyboard .key.large > span {
-    width: 100px;
+#t9_keyboard .key.large > span {
+    width: 90px;
 }
-.t9_keyboard .key > span {    
+#t9_keyboard .key > span {    
     position: relative;
     display: block;
     width: 40px;
@@ -50,47 +97,52 @@
     cursor: pointer;
 }
 
-.t9_keyboard .key > span:hover {
-    background-color: #75b4fb;
-    border: 1px solid #5a88c5;
-    color: #fff;
-    text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
-    -webkit-box-shadow: 0px 3px 0px -2px rgba(117,180,251,1), 0px 2px 0px 0px rgba(90,136,197,1);
-    -moz-box-shadow: 0px 3px 0px -2px rgba(117,180,251,1), 0px 2px 0px 0px rgba(90,136,197,1);
-    box-shadow: 0px 3px 0px -2px rgba(117,180,251,1), 0px 2px 0px 0px rgba(90,136,197,1);
+#t9_keyboard .key > span:hover {    
     cursor: pointer;
 }
 
-.t9_keyboard .key > span:active {
+#t9_keyboard .key > span:active {
     margin-top: 2px;
+
+    background-color: #75b4fb;
+    border: 1px solid #5a88c5;
+    color: #fff;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.2);    
     box-shadow: none;
     -moz-box-shadow: none;
     -webkit-box-shadow: none;
 }
 
-.t9_keyboard .key.icon > span {
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-.t9_keyboard .key > span > per {
+#t9_keyboard .key > span > per {
     position: absolute;
     display: block;
     width: 100%;
     margin: 0px auto;
     bottom: 2px;
 }
-.t9_keyboard .key > span > per.num {
-    top: 5px;
+#t9_keyboard .key > span > per.num {
+    top: 2px;
 }
 
-.icon-delete {
+.key-delete {
+    background-repeat: no-repeat;
+    background-position: center;    
     background-image: url(../images/delete-key.png);
 }
 
-.icon-pageup {
+.key-pageup {
+    background-repeat: no-repeat;
+    background-position: center;
     background-image: url(../images/pageup-key.png);
 }
-.icon-pagedown {
+
+.key-pagedown {
+    background-repeat: no-repeat;
+    background-position: center;
     background-image: url(../images/pagedown-key.png);
+}
+
+input[type="text"].inputting,
+input[type="password"].inputting {
+  background-color: #FCFFD8;   
 }
